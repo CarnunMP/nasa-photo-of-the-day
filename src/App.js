@@ -11,7 +11,7 @@ function App() {
   });
 
   useEffect(() => {
-    axios.get("https://lambda-github-api-server.herokuapp.com/")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
       .then(response => {
         setContent({
           pictureURL: response.data.url,
@@ -19,7 +19,7 @@ function App() {
         });
       })
       .catch(error => {
-        debugger
+        //
       });
   }, []);
 
