@@ -4,6 +4,31 @@
   background: black;
 }
 
+header {
+  width: 100%;
+  height: 5rem;
+  background: red;
+  position: absolute;
+  display: flex;
+}
+
+.logo-div {
+  background: blue;
+  width: auto;
+}
+
+.logo-div img {
+  height: 100%;
+  background: yellow;
+}
+
+.title-div {
+  flex-grow: 1;
+  flex-wrap: auto;
+}
+
+
+
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
