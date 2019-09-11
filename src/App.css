@@ -4,9 +4,10 @@
   background: black;
 }
 
+/* Header styles: */
 header {
   width: 100%;
-  height: 5rem;
+  height: 10%;
   background: black;
   display: flex;
   justify-content: center;
@@ -27,7 +28,36 @@ header {
   color: white;
 }
 
+/* Content styles: */
+.content {
+  height: 85%; /*No idea why, but 90% creates whitespace at the bottom of the page! */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.picture {
+  background: green;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.picture img {
+  height: 100%;
+  border: 1px solid darkred;
+}
+
+.description {
+  border: 1px solid darkred;
+  color: white;
+  height: 90%;
+  width: 40%;
+  overflow: hidden;
+  padding: 1rem;
+}
 
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
