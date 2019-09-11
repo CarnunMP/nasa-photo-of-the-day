@@ -12,17 +12,17 @@ header {
   display: flex;
 }
 
-.logo-div {
+.logo {
   background: blue;
   width: auto;
 }
 
-.logo-div img {
+.logo img {
   height: 100%;
   background: yellow;
 }
 
-.title-div {
+.title {
   flex-grow: 1;
   flex-wrap: auto;
 }

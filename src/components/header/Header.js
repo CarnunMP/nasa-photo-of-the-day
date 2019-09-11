@@ -7,7 +7,7 @@ function Header(props) {
     return (
         <header>
             <Logo/>
-            <div className="title-div">
+            <div className="title">
                 <h1>{title}</h1>
             </div>
         </header>

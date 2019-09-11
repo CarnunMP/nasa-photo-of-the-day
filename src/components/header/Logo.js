@@ -3,7 +3,7 @@ import nasaLogo from "../../images/nasa-logo.png";
 
 function Logo() {
     return (
-        <div className="logo-div">
+        <div className="logo">
             <img src={nasaLogo} alt=""/>
         </div>
     )
