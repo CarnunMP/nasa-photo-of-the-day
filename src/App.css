@@ -7,24 +7,24 @@
 header {
   width: 100%;
   height: 5rem;
-  background: red;
-  position: absolute;
+  background: black;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
 }
 
 .logo {
-  background: blue;
-  width: auto;
+  height: 100%;
+  padding-right: 1rem;
 }
 
 .logo img {
   height: 100%;
-  background: yellow;
 }
 
 .title {
-  flex-grow: 1;
-  flex-wrap: auto;
+  color: white;
 }
 
 
