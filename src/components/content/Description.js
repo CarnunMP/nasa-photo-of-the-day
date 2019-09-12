@@ -1,13 +1,22 @@
 import React from "react";
-import { directive } from "@babel/types";
+import styled from "styled-components";
+
+const StyledDescription = styled.div`
+    background: #070707;
+    color: white;
+    height: 90%;
+    width: 40%;
+    overflow: hidden;
+    padding: 1rem;
+`;
 
 function Description(props) {
     const {description} = props;
 
     return (
-        <div className="description">
+        <StyledDescription>
             <p>{description}</p>
-        </div>
+        </StyledDescription>
     )
 }
 
