@@ -10,6 +10,10 @@ const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
     padding: 1rem 0 1rem 0;
+
+    h1 {
+        color: white;
+    }
 `;
 
 function Header(props) {
@@ -18,7 +22,7 @@ function Header(props) {
     return (
         <StyledHeader>
             <Logo/>
-            <div className="title">
+            <div>
                 <h1>{title}</h1>
             </div>
         </StyledHeader>
