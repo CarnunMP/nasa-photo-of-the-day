@@ -1,16 +1,3 @@
-
-.picture {
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5%;
-}
-
-.picture img {
-  height: 100%;
-}
-
 .description {
   background: #070707;
   color: white;
