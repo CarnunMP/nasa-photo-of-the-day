@@ -1,15 +1,3 @@
-/* Header styles: */
-.title {
-  color: white;
-}
-
-/* Content styles: */
-.content {
-  height: 85%; /*No idea why, but 90% creates whitespace at the bottom of the page! */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .picture {
   height: 90%;
