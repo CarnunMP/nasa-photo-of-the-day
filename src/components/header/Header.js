@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import styled from "styled-components";
+import DatePicker from "../date-picker/DatePicker";
 
 const StyledHeader = styled.header`
     width: 100%;
@@ -13,6 +14,7 @@ const StyledHeader = styled.header`
 
     h1 {
         color: white;
+        margin-right: 1rem;
     }
 `;
 
@@ -25,6 +27,7 @@ function Header(props) {
             <div>
                 <h1>{title}</h1>
             </div>
+            <DatePicker/>
         </StyledHeader>
     )
 }
