@@ -17,6 +17,8 @@ function App() {
     description: "",
   });
 
+  const [date, setDate] = useState(todayString);
+
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=Ks7LSrUexdOdY7bTVHTN66ZCpLGqiwbwTCmAz34o")
       .then(response => {
@@ -32,10 +34,20 @@ function App() {
 
   return (
     <StyledApp>
-      <Header title="PIC OF THE DAY"/>
+      <Header title="PIC OF THE DAY" today={date} date={date}/>
       <Content pictureURL={content.pictureURL} description={content.description}/>
     </StyledApp >
   );
+}
+
+const today = new Date();
+const todayString = `${today.getFullYear()}-${normalise(today.getMonth() + 1)}-${normalise(today.getDate())}`;
+
+function normalise(number) {
+    if (number.toString().length === 1) {
+        return `0${number}`
+    }
+    return number; 
 }
 
 export default App;

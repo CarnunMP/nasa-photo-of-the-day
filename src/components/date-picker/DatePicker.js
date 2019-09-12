@@ -7,23 +7,22 @@ const StyledInput = styled.input`
     border: 1px solid white;
     border-radius: 2px;
     margin-top: 0.5%;
+
+    &:nth-of-type(2) {
+        margin-left: 8px;
+        height: 1.3rem;
+    }
 `;
 
-function DatePicker() {
-    console.log(todayString);
+function DatePicker(props) {
+    const {today, date} = props;
+
     return (
-        <StyledInput type="date" defaultValue={todayString} min="1995-06-16" max={todayString}/>
+        <form>
+            <StyledInput type="date" defaultValue={date} min="1995-06-16" max={today}/>
+            <StyledInput type="submit"/>
+        </form>
     )
-}
-
-const today = new Date();
-const todayString = `${today.getFullYear()}-${normalise(today.getMonth() + 1)}-${normalise(today.getDate())}`;
-
-function normalise(number) {
-    if (number.toString().length === 1) {
-        return `0${number}`
-    }
-    return number; 
 }
 
 export default DatePicker;
