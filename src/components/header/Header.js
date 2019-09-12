@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
 `;
 
 function Header(props) {
-    const {title, today, date} = props;
+    const {title, today, date, dateChanged} = props;
 
     return (
         <StyledHeader>
@@ -27,7 +27,7 @@ function Header(props) {
             <div>
                 <h1>{title}</h1>
             </div>
-            <DatePicker today={today} date={date}/>
+            <DatePicker today={today} date={date} dateChanged={dateChanged}/>
         </StyledHeader>
     )
 }

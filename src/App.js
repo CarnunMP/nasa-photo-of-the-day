@@ -19,8 +19,12 @@ function App() {
 
   const [date, setDate] = useState(todayString);
 
+  const dateChanged = (event) => {
+    setDate(event.target.value);
+  };
+
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=Ks7LSrUexdOdY7bTVHTN66ZCpLGqiwbwTCmAz34o")
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=Ks7LSrUexdOdY7bTVHTN66ZCpLGqiwbwTCmAz34o&date=${date}`)
       .then(response => {
         setContent({
           pictureURL: response.data.url,
@@ -30,13 +34,13 @@ function App() {
       .catch(error => {
         //
       });
-  }, []);
+  }, [date]);
 
   return (
     <StyledApp>
-      <Header title="PIC OF THE DAY" today={date} date={date}/>
+      <Header title="PIC OF THE DAY" today={todayString} date={date} dateChanged={dateChanged}/>
       <Content pictureURL={content.pictureURL} description={content.description}/>
-    </StyledApp >
+    </StyledApp>
   );
 }
 

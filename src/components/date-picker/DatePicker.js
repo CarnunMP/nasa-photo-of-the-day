@@ -15,12 +15,12 @@ const StyledInput = styled.input`
 `;
 
 function DatePicker(props) {
-    const {today, date} = props;
+    const {today, date, dateChanged} = props;
 
     return (
         <form>
-            <StyledInput type="date" defaultValue={date} min="1995-06-16" max={today}/>
-            <StyledInput type="submit"/>
+            <StyledInput type="date" defaultValue={date} min="1995-06-16" max={today} onChange={dateChanged}/>
+            {/* <StyledInput type="submit"/> */}
         </form>
     )
 }
